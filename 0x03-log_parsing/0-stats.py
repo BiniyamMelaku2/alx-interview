@@ -21,10 +21,12 @@ def printstatus(dict, totalsize):
 
 if __name__ == "__main__":
     try:
-        for val in sys.stdin:
+        for line in sys.stdin:
             if i != 0 and i % 10 == 0:
                 printstatus(dict, totalsize)
-            mylist = val.split(" ")
+            mylist = line.split(" ")
+            if len(mylist) != 9:
+                break
             i += 1
             try:
                 totalsize += int(mylist[-1])
