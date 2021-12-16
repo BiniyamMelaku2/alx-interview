@@ -21,8 +21,10 @@ def printstatus(dict, totalsize):
 
 try:
     for val in sys.stdin:
+        if i != 0 and i % 10 == 0:
+            printstatus(dict, totalsize)
+        mylist = val.split(" ")
         i += 1
-        mylist = val.split()
         if len(mylist) == 9:
             try:
                 totalsize += int(mylist[-1])
@@ -34,9 +36,7 @@ try:
                 pass
             if stat in status:
                 dict[stat] += 1
-        if i % 10 == 0:
-            printstatus(dict, totalsize)
+        printstatus(dict, totalsize)
 except KeyboardInterrupt:
-    pass
-finally:
     printstatus(dict, totalsize)
+    raise
