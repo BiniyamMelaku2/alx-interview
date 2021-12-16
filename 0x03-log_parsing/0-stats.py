@@ -26,6 +26,7 @@ if __name__ == "__main__":
                 printstatus(dict, totalsize)
             mylist = line.split(" ")
             if len(mylist) != 9:
+                i += 1
                 continue
             i += 1
             try:
