@@ -25,18 +25,17 @@ try:
             printstatus(dict, totalsize)
         mylist = val.split(" ")
         i += 1
-        if len(mylist) == 9:
-            try:
-                totalsize += int(mylist[-1])
-            except Exception:
-                pass
-            try:
-                stat = int(mylist[-2])
-            except Exception:
-                pass
-            if stat in status:
-                dict[stat] += 1
-        printstatus(dict, totalsize)
+        try:
+            totalsize += int(mylist[-1])
+        except Exception:
+            pass
+        try:
+            stat = int(mylist[-2])
+        except Exception:
+            pass
+        if stat in status:
+            dict[stat] += 1
+    printstatus(dict, totalsize)
 except KeyboardInterrupt:
     printstatus(dict, totalsize)
     raise
