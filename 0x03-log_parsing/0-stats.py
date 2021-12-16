@@ -24,9 +24,8 @@ if __name__ == "__main__":
         for line in sys.stdin:
             if i != 0 and i % 10 == 0:
                 printstatus(dict, totalsize)
-            mylist = line.split(" ")
+            mylist = line.split(' ')
             if len(mylist) != 9:
-                i += 1
                 continue
             i += 1
             try:
