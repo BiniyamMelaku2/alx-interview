@@ -37,3 +37,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         printstatus(dict, totalsize)
         raise
+    printstatus(dict, totalsize)
