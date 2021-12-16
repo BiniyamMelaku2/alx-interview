@@ -12,8 +12,8 @@ dict = {200: 0, 301: 0, 400: 0, 401: 0,
 try:
     for val in sys.stdin:
         i += 1
-        mylist = val.split(' ')
-        if len(mylist) > 2:
+        mylist = val.split()
+        if len(mylist) == 9:
             totalsize += int(mylist[-1])
             stat = int(mylist[-2])
             if stat in status:
