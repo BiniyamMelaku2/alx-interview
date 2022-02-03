@@ -17,6 +17,6 @@ Create a function `def island_perimeter(grid):` that returns the perimeter of th
 * There is only one island (or nothing).
 * The island doesn’t have “lakes” (water inside that isn’t connected to the water surrounding the island).
 ```
-guillaume@ubuntu:~/0x09$ ./0-main.py
+@ubuntu:~/0x09$ ./0-main.py
 12
 ```
