@@ -27,6 +27,6 @@ def isWinner(x, nums):
                 count += 1
     except Exception:
         return None
-    if count % 2 == 0:
+    if count % 2 == 0 or x == 1:
         return "Ben"
     return "Maria"
